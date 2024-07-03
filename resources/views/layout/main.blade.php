@@ -147,9 +147,11 @@
                 <ul class="list-unstyled">
                   <li><a href="{{url ('dashboard')}}">Dashboard</a></li>
                   <li><a href="{{url ('home')}}">Home</a></li>
+                  <li><a href="{{url ('home')}}">Buku</a></li>
                   <li><a href="{{url ('anggota')}}">Anggota</a></li>
                   <li><a href="{{url ('petugas')}}">Petugas</a></li>
                   <li><a href="{{url ('pinjam')}}" >Peminjaman</a></li>
+                  <li><a href="{{url ('logout')}}">Logout</a></li>
                 </ul>
               </div>
               
