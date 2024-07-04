@@ -28,7 +28,7 @@ class PetugasController extends Controller
      */
     public function create()
     {
-        return view('petugas.create');
+        return view('Petugas.create');
     }
 
     /**

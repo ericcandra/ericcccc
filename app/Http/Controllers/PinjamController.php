@@ -30,7 +30,7 @@ class PinjamController extends Controller
         $buku = buku::all();
         $anggota = Anggota::all();
         $petugas = Petugas::all();
-        return view('pinjam.create')
+        return view('Pinjam.create')
         ->with('buku',$buku)
         ->with('anggota',$anggota)
         ->with('petugas',$petugas);
