@@ -22,7 +22,7 @@ class AnggotaController extends Controller
         //     $mahasiswa = Anggota::all();
         // }
         $anggota = anggota::all();
-        return view('anggota.index')
+        return view('Anggota.index')
             ->with('anggota',$anggota);
         //
     }

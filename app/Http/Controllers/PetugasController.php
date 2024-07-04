@@ -19,7 +19,7 @@ class PetugasController extends Controller
     public function index()
     {
         $petugas = petugas::all();
-        return view('petugas.index')
+        return view('Petugas.index')
             ->with('petugas',$petugas);
     }
 

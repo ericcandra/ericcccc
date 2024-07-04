@@ -16,7 +16,7 @@ class BukuController extends Controller
     {
         $buku = buku::all();
         // dd ($buku);
-        return view('buku.index')
+        return view('Buku.index')
             ->with('buku',$buku);
         //
     }

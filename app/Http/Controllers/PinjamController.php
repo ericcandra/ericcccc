@@ -17,7 +17,7 @@ class PinjamController extends Controller
     public function index()
     {
         $pinjam = Pinjam::all();
-        return view('pinjam.index')
+        return view('Pinjam.index')
             ->with('pinjam',$pinjam);
         //
     }
