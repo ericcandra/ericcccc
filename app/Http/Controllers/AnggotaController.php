@@ -92,31 +92,31 @@ class AnggotaController extends Controller
      */
     public function update(Request $request, anggota $anggota)
     {
-        // if (auth()->user()->cannot('update', $anggota)){
-        //     abort(403);
-        // }
-        // // dd($request);
-        // if($request->nama_anggota) {
-        //     $val = $request->validate([
-        //         // 'id'=> 'required',
-        //         // 'npm'=>'required',
-        //         'nama_anggota'=>"required|unique:anggotas",
-        //         'alamat'=>'required',
-        //         'nohp'=>'required',
+        if (auth()->user()->cannot('update', $anggota)){
+            abort(403);
+        }
+        // dd($request);
+        if($request->nama_anggota) {
+            $val = $request->validate([
+                // 'id'=> 'required',
+                // 'npm'=>'required',
+                'nama_anggota'=>"required|unique:anggotas",
+                'alamat'=>'required',
+                'nohp'=>'required',
             
-        //         // 'url_foto' => 'Required|file|mimes:png,jpg|max:10000',
-        //         // 'prodi_id' => 'required'
-        //     ]);
+                // 'url_foto' => 'Required|file|mimes:png,jpg|max:10000',
+                // 'prodi_id' => 'required'
+            ]);
     
-        // } else {
-        //     $val = $request->validate([
-        //         // 'id'=> 'required',
-        //         // 'npm'=>'required',
-        //         'nama_anggota'=>"required|unique:anggotas",
-        //         // 'nama_buku'=>'required',
-        //         'alamat'=>'required',
-        //         'nohp'=>'required',
-        //     ]);
+        } else {
+            $val = $request->validate([
+                // 'id'=> 'required',
+                // 'npm'=>'required',
+                'nama_anggota'=>"required|unique:anggotas",
+                // 'nama_buku'=>'required',
+                'alamat'=>'required',
+                'nohp'=>'required',
+            ]);
         //     // ekstenso file yang di upload
         // // $ext = $request->id->getClientOriginalExtension();
         
@@ -129,10 +129,10 @@ class AnggotaController extends Controller
         // }
 
         // // simpan ke tabel mahasiswa
-        // anggota::where('id',$anggota['id'])->update($val);
+        anggota::where('id',$anggota['id'])->update($val);
 
         // // redirect ke halaman list fakultas
-        // return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
     }
 
     /**
