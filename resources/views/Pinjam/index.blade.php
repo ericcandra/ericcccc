@@ -17,7 +17,7 @@
                   <p class="card-description">
                     Add class <code>list data Pinjam</code>
                   </p>
-                  @can('create',App\Pinjam::class)
+                  @can('create',App\pinjam::class)
                   <a href="{{route('pinjam.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
                   @endcan
                   <div class="table-responsive">
