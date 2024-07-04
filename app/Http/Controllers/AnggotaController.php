@@ -133,8 +133,8 @@ class AnggotaController extends Controller
 
         // // redirect ke halaman list fakultas
         return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        }
     }
-
     /**
      * Remove the specified resource from storage.
      */
