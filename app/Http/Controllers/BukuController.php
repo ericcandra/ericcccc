@@ -133,6 +133,6 @@ class BukuController extends Controller
         // dd($buku);
         
         $buku->delete();
-        return redirect()->route('Buku.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('buku.index')->with('success',' berhasil dihapus.');
     }
 }

@@ -155,6 +155,6 @@ class PinjamController extends Controller
         // dd($mahasiswa);
         
         $pinjam->delete();
-        return redirect()->route('Pinjam.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('pinjam.index')->with('success',' berhasil dihapus.');
     }
 }

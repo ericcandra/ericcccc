@@ -142,7 +142,7 @@ class PetugasController extends Controller
         // dd($mahasiswa);
         
         $petugas->delete();
-        return redirect()->route('Petugas.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('petugas.index')->with('success',' berhasil dihapus.');
     }
 
 }
