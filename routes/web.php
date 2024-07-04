@@ -23,7 +23,7 @@ Route::get('home', function () {
 
 
 Route::middleware('auth')->group(function () {
-    Route::resource('Anggota', AnggotaController::class);
+    Route::resource('anggota', AnggotaController::class);
     Route::resource('buku', BukuController::class);
     Route::resource('petugas', PetugasController::class);
     Route::resource('pinjam', PinjamController::class);
