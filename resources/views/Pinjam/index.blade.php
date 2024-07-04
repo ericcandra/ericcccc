@@ -53,7 +53,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              <a href="{{route('pinjam.edit',$item["jumlah_pinjam"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{route('Pinjam.edit',$item["jumlah_pinjam"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                         </tr>
