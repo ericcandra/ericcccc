@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\anggota;
+use App\Models\Anggota;
 use Illuminate\Auth\Access\Response;
 
 class anggotaPolicy
