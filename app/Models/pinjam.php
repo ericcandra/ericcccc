@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\buku;
 use App\Models\petugas;
-use App\Models\anggota;
+use App\Models\Anggota;
 
 class Pinjam extends Model
 {
