@@ -151,7 +151,7 @@
                   <li><a href="{{url ('anggota')}}">Anggota</a></li>
                   <li><a href="{{url ('petugas')}}">Petugas</a></li>
                   <li><a href="{{url ('pinjam')}}" >Peminjaman</a></li>
-                  <li><a href="{{url ('logout')}}">Logout</a></li>
+                  
                 </ul>
               </div>
               
