@@ -33,7 +33,7 @@ class AnggotaController extends Controller
     public function create()
     {
         // $anggota = anggota::all();
-        return view('anggota.create');
+        return view('Anggota.create');
         // ->with('buku',$anggota);
     }
 
