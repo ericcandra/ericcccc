@@ -64,10 +64,10 @@ class AnggotaController extends Controller
         // $request->url_foto->move('foto',$val['url_foto']);
 
         // simpan ke tabel fakultas
-        Anggota::create($val);
+        anggota::create($val);
 
         // redirect ke halaman list fakultas
-        return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
     }
 
     /**
@@ -146,6 +146,6 @@ class AnggotaController extends Controller
         // dd($mahasiswa);
         
         $anggota->delete();
-        return redirect()->route('Anggota.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('anggota.index')->with('success',' berhasil dihapus.');
     }
 }
