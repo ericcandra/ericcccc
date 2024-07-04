@@ -86,7 +86,7 @@ class PinjamController extends Controller
         $buku = buku::all();
         $anggota = Anggota::all();
         $petugas = petugas::all(); 
-        return view('pinjam.edit')
+        return view('Pinjam.edit')
         ->with('buku',$buku)
         ->with('anggota',$anggota)
         ->with('petugas',$petugas)
@@ -155,6 +155,6 @@ class PinjamController extends Controller
         // dd($mahasiswa);
         
         $pinjam->delete();
-        return redirect()->route('pinjam.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('Pinjam.index')->with('success',' berhasil dihapus.');
     }
 }

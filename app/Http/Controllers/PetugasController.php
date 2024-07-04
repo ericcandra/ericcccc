@@ -77,7 +77,7 @@ class PetugasController extends Controller
     {
         // dd($mahasiswa);
         $petugas = petugas::all(); 
-        return view('petugas.edit')
+        return view('Petugas.edit')
         ->with('petugas',$petugas);
     }
     
@@ -142,7 +142,7 @@ class PetugasController extends Controller
         // dd($mahasiswa);
         
         $petugas->delete();
-        return redirect()->route('petugas.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('Petugas.index')->with('success',' berhasil dihapus.');
     }
 
 }

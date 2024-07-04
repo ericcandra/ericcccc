@@ -69,7 +69,7 @@ class BukuController extends Controller
     {
         //dd($buku);
         $buku = buku::find($buku); 
-        return view('buku.edit')
+        return view('Buku.edit')
         ->with('buku',$buku);
     }
 
@@ -133,6 +133,6 @@ class BukuController extends Controller
         // dd($buku);
         
         $buku->delete();
-        return redirect()->route('buku.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('Buku.index')->with('success',' berhasil dihapus.');
     }
 }

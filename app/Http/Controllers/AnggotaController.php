@@ -83,7 +83,7 @@ class AnggotaController extends Controller
     public function edit(anggota $anggota)
     {
         $anggota = anggota::all(); 
-        return view('anggota.edit')
+        return view('Anggota.edit')
         ->with('anggota',$anggota);
     }
 
@@ -146,6 +146,6 @@ class AnggotaController extends Controller
         // dd($mahasiswa);
         
         $anggota->delete();
-        return redirect()->route('anggota.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('Anggota.index')->with('success',' berhasil dihapus.');
     }
 }
