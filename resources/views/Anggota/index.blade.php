@@ -40,7 +40,7 @@
                             {{-- <td>{{$item["buku"]["kode_buku"]}}</td> --}}
                             <td>
                               @can('delete',$item)
-                              <form action="{{route('anggota.destroy',$item['id'])}}" method="post" style="display: inline">
+                              <form action="{{route('anggota.destroy',$item['nama_anggota'])}}" method="post" style="display: inline">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{$item["nama_anggota"]}}">Hapus</button>
