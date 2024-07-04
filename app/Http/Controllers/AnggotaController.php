@@ -33,7 +33,7 @@ class AnggotaController extends Controller
     public function create()
     {
         // $anggota = anggota::all();
-        return view('Anggota.create');
+        return view('anggota.create');
         // ->with('buku',$anggota);
     }
 
@@ -67,7 +67,7 @@ class AnggotaController extends Controller
         anggota::create($val);
 
         // redirect ke halaman list fakultas
-        return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
     }
 
     /**
@@ -146,6 +146,6 @@ class AnggotaController extends Controller
         // dd($mahasiswa);
         
         $anggota->delete();
-        return redirect()->route('anggota.index')->with('success',' berhasil dihapus.');
+        return redirect()->route('Anggota.index')->with('success',' berhasil dihapus.');
     }
 }
