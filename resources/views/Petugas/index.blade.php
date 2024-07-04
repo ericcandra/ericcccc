@@ -17,7 +17,7 @@
                   <p class="card-description">
                     Add class <code>list data Petugas</code>
                   </p>
-                  @can('create',App\Petugas::class)
+                  @can('create',App\petugas::class)
                   <a href="{{route('petugas.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
                   @endcan
                   <div class="table-responsive">
