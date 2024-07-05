@@ -50,7 +50,7 @@ class PinjamController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->user()->cannot('create', Pinjam::class)){
+        if ($request->user()->cannot('create', pinjam::class)){
             abort(403);
         }
         // dd($request);

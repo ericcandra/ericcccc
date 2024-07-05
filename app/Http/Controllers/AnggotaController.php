@@ -42,7 +42,7 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->user()->cannot('create', anggota::class)){
+        if ($request->user()->cannot('create', Anggota::class)){
             abort(403);
         }
         // return($request);
