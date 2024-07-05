@@ -64,7 +64,7 @@ class AnggotaController extends Controller
         // $request->url_foto->move('foto',$val['url_foto']);
 
         // simpan ke tabel fakultas
-        anggota::create($val);
+        Anggota::create($val);
 
         // redirect ke halaman list fakultas
         return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
