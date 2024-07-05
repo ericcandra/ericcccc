@@ -65,7 +65,7 @@ class PinjamController extends Controller
         ]);
 
         // simpan ke tabel fakultas
-        Pinjam::create($val);
+        pinjam::create($val);
 
         // redirect ke halaman list fakultas
         return redirect()->route('pinjam.index')->with('success',$val['jumlah_pinjam'].'berhasil disimpan');
@@ -138,7 +138,7 @@ class PinjamController extends Controller
         }
 
         // simpan ke tabel mahasiswa
-        Pinjam::where('id',$pinjam['id'])->update($val);
+        pinjam::where('id',$pinjam['id'])->update($val);
 
         // redirect ke halaman list fakultas
         return redirect()->route('pinjam.index')->with('success',$val['jumlah_pinjam'].'berhasil disimpan');

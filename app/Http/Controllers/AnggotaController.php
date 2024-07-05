@@ -67,7 +67,7 @@ class AnggotaController extends Controller
         Anggota::create($val);
 
         // redirect ke halaman list fakultas
-        return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
     }
 
     /**
