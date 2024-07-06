@@ -49,7 +49,7 @@
             .highcharts-data-table caption {
                 padding: 1em 0;
                 font-size: 1.2em;
-                color: #555;
+                color: black;
             }
 
             .highcharts-data-table th {
