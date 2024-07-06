@@ -36,7 +36,7 @@
               </div>
               <div class="form-group">
                 <label for="nama">Stok</label>
-                <input type="text" class="form-control" name="kategori" placeholder="kategori">
+                <input type="text" class="form-control" name="stok" placeholder="kategori">
               </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 <a href="{{ url('buku')}}" class="btn btn-light">Batal</a>
