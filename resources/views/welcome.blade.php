@@ -65,7 +65,7 @@
                                 <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
                                     <img
                                         src="gambar1p.jpg"
-                                        alt="Laravel documentation screenshot"
+                                        alt="gambar1p.jpg"
                                         class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
                                         onerror="
                                             document.getElementById('screenshot-container').classList.add('!hidden');
