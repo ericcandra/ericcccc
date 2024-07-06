@@ -131,7 +131,7 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
               <div class="col-9">
-                <h3 class="my-0 site-logo"><img src="{{url('images')}}/kongkam.jpeg" width="100%" height="150px">
+                <h3 class="my-0 site-logo"><img src="{{url('images')}}/logoabuabu.jpg" width="100%" height="150px">
                 <h3 class="footer-heading mb-4">Tentang Kami</h3>
                 <p>Perpustakaan adalah sebuah tempat yang digunakan untuk menyimpan informasi baik berupa cetak (buku, koran, jurnal, majalah, karya tulis, karya lukisan)</p>
               </div>
