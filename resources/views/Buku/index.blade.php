@@ -29,8 +29,9 @@
                           <th>Nama Buku</th>
                           <th>Pengarang</th>
                           <th>Kategori</th>
-                          <th>Aksi</th>
                           <th>Stok</th>
+                          <th>Aksi</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
