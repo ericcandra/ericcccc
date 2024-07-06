@@ -46,7 +46,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              {{-- <a href="{{route('petugas.edit',$item["nama_petugas"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a> --}}
+                              <a href="{{route('petugas.edit',$item["nama_petugas"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                             

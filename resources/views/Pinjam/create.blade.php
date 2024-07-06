@@ -44,6 +44,20 @@
                     </span>
                 @enderror
                 <div class="form-group">
+                  <label for="text">buku_id</label>
+                  <select name="buku_id" class="form-control">
+                      @foreach ($buku as $item)
+                          <option value="{{$item['id']}}">
+                              {{$item['nama_buku']}}
+                          </option>
+                      @endforeach
+                  </select>
+                  @error('buku_id')
+                      <span class="text-danger">
+                          {{$message}}
+                      </span>
+                  @enderror
+                <div class="form-group">
                     <label for="text">anggota_id</label>
                     <select name="anggota_id" class="form-control">
                         @foreach ($anggota as $item)

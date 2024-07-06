@@ -30,6 +30,7 @@
                           <th>Pengarang</th>
                           <th>Kategori</th>
                           <th>Aksi</th>
+                          <th>Stok</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -39,6 +40,8 @@
                             <td>{{$item["nama_buku"]}}</td>
                             <td>{{$item["pengarang"]}}</td>
                             <td>{{$item["kategori"]}}</td>
+                            <td>{{$item["stok"]}}</td>
+                            
                             <td>
                               @can('delete',$item)
                               <form action="{{route('buku.destroy',$item['id'])}}" method="post" style="display: inline">
@@ -49,7 +52,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              {{-- <a href="{{route('buku.edit',$item["kode_buku"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a> --}}
+                              <a href="{{route('buku.edit',$item["kode_buku"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
 

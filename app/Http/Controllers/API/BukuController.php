@@ -33,7 +33,8 @@ class BukuController extends Controller
             'kode_buku' => 'required|unique:bukus',
             'nama_buku' => "required",
             'pengarang' => "required",
-            'kategori' => "required"
+            'kategori' => "required",
+            'stok'=>'required'
         ]);
 
         $buku = buku::create($validate);
@@ -51,6 +52,7 @@ class BukuController extends Controller
             'nama_buku'=>'required',
             'pengarang'=>'required',
             'kategori'=>'required',
+            'stok'=>'required'
         ]);
 
         buku::where('id', $id)->update($validate);

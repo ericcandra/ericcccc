@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nama_buku',45);
             $table->string('pengarang',25);
             $table->string('kategori',40);
+            $table->char('stok',50);
             $table->timestamps();
         });
     }

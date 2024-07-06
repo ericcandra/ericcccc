@@ -45,7 +45,8 @@ class BukuController extends Controller
             'kode_buku'=>"required|unique:bukus",
             'nama_buku'=>"required",
             'pengarang'=>"required",
-            'kategori'=>"required"
+            'kategori'=>"required",
+            'stok'=>"required"
         ]);
 
         // simpan ke tabel fakultas
@@ -78,47 +79,49 @@ class BukuController extends Controller
      */
     public function update(Request $request, buku $buku)
     {
-        // if (auth()->user()->cannot('update', $buku)){
-        //     abort(403);
-        // }
-        // // dd($request);
-        // if($request->kode_buku) {
-        //     $val = $request->validate([
-        //         // 'id'=> 'required',
-        //         // 'npm'=>'required',
-        //         'kode_buku'=>"required|unique:bukus",
-        //         'nama_buku'=>'required',
-        //         'pengarang'=>'required',
-        //         'kategori'=>'required',
-        //         // 'url_foto' => 'Required|file|mimes:png,jpg|max:10000',
-        //         // 'prodi_id' => 'required'
-        //     ]);
+        if (auth()->user()->cannot('update', $buku)){
+            abort(403);
+        }
+        // dd($request);
+        if($request->kode_buku) {
+            $val = $request->validate([
+                // 'id'=> 'required',
+                // 'npm'=>'required',
+                'kode_buku'=>"required|unique:bukus",
+                'nama_buku'=>'required',
+                'pengarang'=>'required',
+                'kategori'=>'required',
+                'stok'=>'required'
+                // 'url_foto' => 'Required|file|mimes:png,jpg|max:10000',
+                // 'prodi_id' => 'required'
+            ]);
     
-        // } else {
-        //     $val = $request->validate([
-        //         // 'id'=> 'required',
-        //         // 'npm'=>'required',
-        //         'kode_buku'=>"required|unique:bukus",
-        //         'nama_buku'=>'required',
-        //         'pengarang'=>'required',
-        //         'kategori'=>'required',
-        //     ]);
-        //     // ekstenso file yang di upload
-        // // $ext = $request->id->getClientOriginalExtension();
+        } else {
+            $val = $request->validate([
+                // 'id'=> 'required',
+                // 'npm'=>'required',
+                'kode_buku'=>"required|unique:bukus",
+                'nama_buku'=>'required',
+                'pengarang'=>'required',
+                'kategori'=>'required',
+                'stok'=>'required'
+            ]);
+            // ekstenso file yang di upload
+        // $ext = $request->id->getClientOriginalExtension();
         
-        // // // rename misal : npm.extense
-        // // $val['id'] = $request->id.".".$ext;
+        // // rename misal : npm.extense
+        // $val['id'] = $request->id.".".$ext;
 
-        // // // upload ke tabel mahasiswa
-        // // $request->id->move('id',$val['nama_buku']);
+        // // upload ke tabel mahasiswa
+        // $request->id->move('id',$val['nama_buku']);
     
-        // }
+        }
 
-        // // simpan ke tabel mahasiswa
-        // buku::where('id',$buku['id'])->update($val);
+        // simpan ke tabel mahasiswa
+        buku::where('id',$buku['id'])->update($val);
 
-        // // redirect ke halaman list fakultas
-        // return redirect()->route('buku.index')->with('success',$val['kode_buku'].'berhasil disimpan');
+        // redirect ke halaman list fakultas
+        return redirect()->route('buku.index')->with('success',$val['kode_buku'].'berhasil disimpan');
     
     }
 

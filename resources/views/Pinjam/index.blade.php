@@ -26,6 +26,7 @@
                         <tr>
                             <th>Jumlah Pinjam</th>
                             <th>Kode Buku</th>
+                            <th>Nama Buku</th>
                             <th>Nama Anggota</th>
                             <th>Nama Petugas</th>
                             <th>Tanggal Pinjam</th>
@@ -39,6 +40,7 @@
                         <tr>
                             <td>{{$item ["jumlah_pinjam"]}}</td>
                             <td>{{$item["buku"]["kode_buku"]}}</td>
+                            <td>{{$item["buku"]["nama_buku"]}}</td>
                             <td>{{$item["anggota"]["nama_anggota"]}}</td>
                             <td>{{$item["petugas"]["nama_petugas"]}}</td>
                             <td>{{$item["tanggal_pinjam"]}}</td>

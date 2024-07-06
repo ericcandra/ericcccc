@@ -1,11 +1,11 @@
-{{-- @extends('layout.main')
+@extends('layout.main') 
 
 @section('title','anggota')
 
 @section('content')
 <div class="row">
-    {{-- formulirtambah fakultas --}}
-    {{-- <div class="col-md-6 grid-margin stretch-card">
+    formulirtambah fakultas
+    <div class="col-md-6 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Tambah Anggota</h4>
@@ -43,12 +43,12 @@
                         {{$message}}
                     </span>
                 @enderror --}}
-              {{-- </div>
+              </div>
               <button type="submit" class="btn btn-primary mr-2">Submit</button>
               <a href="{{ url('anggota')}}" class="btn btn-light">Batal</a>
             </form>
           </div>
         </div>
       </div>
-</div> --}} 
-{{-- @endsection --}} 
+</div> 
+@endsection 
