@@ -15,11 +15,12 @@
         <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
-                A basic column chart comparing estimated corn and wheat production
-                in some countries.
+                tabel anggota dengan tabel pinjam yaitu dimana di anggota dengan jumlah
+                peminjaman buku misal eric candra meminjam 1 buku A dan pinjam buku lain
+                misal buku B maka akan bertambah jumlah yang di pinjam maka grafik akan naik
+                dengan sesuai yang di pinjam.
 
-                The chart is making use of the axis crosshair feature, to highlight
-                the hovered country.
+                
             </p>
         </figure>
         {{-- style css --}}

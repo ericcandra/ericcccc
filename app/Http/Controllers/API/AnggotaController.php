@@ -11,7 +11,7 @@ class AnggotaController extends Controller
 {
     public function index()
     {
-        $anggota = anggota::all();
+        $anggota = Anggota::all();
         if ($anggota->isEmpty()) {
             $response['message'] = 'Tidak ada anggota yang ditemukan.';
             $response['success'] = false;
@@ -34,7 +34,7 @@ class AnggotaController extends Controller
             'nohp'=>"required",
         ]);
 
-        $anggota = anggota::create($validate);
+        $anggota = Anggota::create($validate);
         if($anggota){
             $response['success'] = true;
             $response['message'] = 'anggota berhasil ditambahkan.';
@@ -49,14 +49,14 @@ class AnggotaController extends Controller
             'nohp'=>'required',
         ]);
 
-        anggota::where('id', $id)->update($validate);
+        Anggota::where('id', $id)->update($validate);
         $response['success'] = true;
         $response['message'] = 'Anggota berhasil diperbarui.';
         return response()->json($response, Response::HTTP_OK);
     }
     public function destroy($id)
     {
-        $anggota = anggota::where('id', $id);
+        $anggota = Anggota::where('id', $id);
         if(count($anggota->get())){
             $anggota->delete();
             $response['success'] = true;
