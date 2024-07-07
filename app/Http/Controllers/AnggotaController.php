@@ -129,7 +129,7 @@ class AnggotaController extends Controller
         // }
 
         // // simpan ke tabel mahasiswa
-        Anggota::where('id',$anggota['id'])->update($val);
+        Anggota::where('nama_anggota',$anggota['nama_anggota'])->update($val);
 
         // // redirect ke halaman list fakultas
         return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');

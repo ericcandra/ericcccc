@@ -48,7 +48,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              <a href="{{route('anggota.edit',$item["id"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{route('anggota.edit',$item["nama_anggota"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                         </tr>
