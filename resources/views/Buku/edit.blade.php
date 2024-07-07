@@ -36,11 +36,11 @@
                 <label for="nama">Stok</label>
                 <input type="text" class="form-control" name="kategori" placeholder="kategori">
               </div> 
-                    {{-- @foreach ($buku as $item) 
-                        <option value="{{$item['nama_buku']}}" {{(old('buku_id')==$item["nama_buku"])? "selected":($buku['nama_buku']==$item["nama_buku"]?"Selected":null)}}>
-                            {{$item['nama_buku']}}
+                    @foreach ($buku as $item) 
+                        <option value="{{$item['kode_buku']}}" {{(old('buku_id')==$item["kode_buku"])? "selected":($buku['kode_buku']==$item["kode_buku"]?"Selected":null)}}>
+                            {{$item['kode_buku']}}
                         </option>
-                    @endforeach --}}
+                    @endforeach
               <button type="submit" class="btn btn-primary mr-2">Submit</button> 
               <a href="{{ url('buku')}}" class="btn btn-light">Batal</a>
             </form>
