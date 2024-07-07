@@ -118,7 +118,7 @@ class BukuController extends Controller
         }
 
         // simpan ke tabel mahasiswa
-        buku::where('id',$buku['id'])->update($val);
+        buku::where('id',$Buku['id'])->update($val);
 
         // redirect ke halaman list fakultas
         return redirect()->route('buku.index')->with('success',$val['kode_buku'].'berhasil disimpan');

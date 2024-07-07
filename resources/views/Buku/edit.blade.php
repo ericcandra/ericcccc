@@ -19,6 +19,9 @@
                 <label for="nama">Kode Buku</label>
                 <input type="text" class="form-control" name="kode_buku" placeholder="kode buku">
               </div>
+              @error('kode_buku')
+                  {{ $message}}
+              @enderror
                   
               <div class="form-group">
                 <label for="nama">Nama Buku</label>

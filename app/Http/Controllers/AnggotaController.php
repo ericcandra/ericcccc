@@ -21,7 +21,7 @@ class AnggotaController extends Controller
         // }else{
         //     $mahasiswa = Anggota::all();
         // }
-        $anggota = anggota::all();
+        $anggota = Anggota::all();
         return view('Anggota.index')
             ->with('anggota',$anggota);
         //
@@ -73,16 +73,16 @@ class AnggotaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(anggota $anggota)
+    public function show(Anggota $anggota)
     {
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(anggota $anggota)
+    public function edit(Anggota $anggota)
     {
-        $anggota = anggota::all(); 
+        $anggota = Anggota::all(); 
         return view('Anggota.edit')
         ->with('anggota',$anggota);
     }
@@ -90,7 +90,7 @@ class AnggotaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, anggota $anggota)
+    public function update(Request $request, Anggota $anggota)
     {
         if (auth()->user()->cannot('update', $anggota)){
             abort(403);
@@ -129,16 +129,16 @@ class AnggotaController extends Controller
         // }
 
         // // simpan ke tabel mahasiswa
-        anggota::where('id',$anggota['id'])->update($val);
+        Anggota::where('id',$anggota['id'])->update($val);
 
         // // redirect ke halaman list fakultas
-        return redirect()->route('anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
+        return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');
         }
     }
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(anggota $anggota)
+    public function destroy(Anggota $anggota)
     {
         if (auth()->user()->cannot('delete', $anggota)){
             abort(403);
