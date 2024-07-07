@@ -17,8 +17,8 @@
                   <p class="card-description">
                     Add class <code>list data Anggota</code>
                   </p>
-                  @can('create',App\anggota::class)
-                  <a href="{{route('anggota.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
+                  @can('create',App\Anggota::class)
+                  <a href="{{route('Anggota.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
                   @endcan
                   <div class="table-responsive">
                     <table class="table">
@@ -48,7 +48,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              <a href="{{route('anggota.edit',$item["id"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{route('Anggota.edit',$item["id"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                         </tr>
