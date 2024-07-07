@@ -12,7 +12,7 @@
             <p class="card-description">
               Formulir tambah Anggota
             </p>
-            <form method="POST" action="{{ route('anggota.update',$anggota["nama_anggota"])}}" class ="forms-sample">
+            <form method="POST" action="{{ route('anggota.update',$anggota["id"])}}" class ="forms-sample">
             @method('put')
             @csrf
               <div class="form-group">
