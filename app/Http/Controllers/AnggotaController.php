@@ -42,7 +42,7 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->user()->cannot('create', Anggota::class)){
+        if ($request->user()->cannot('create', anggota::class)){
             abort(403);
         }
         // return($request);
@@ -64,7 +64,7 @@ class AnggotaController extends Controller
         // $request->url_foto->move('foto',$val['url_foto']);
 
         // simpan ke tabel fakultas
-        Anggota::create($val);
+        anggota::create($val);
 
         // redirect ke halaman list fakultas
         return redirect()->route('Anggota.index')->with('success',$val['nama_anggota'].'berhasil disimpan');

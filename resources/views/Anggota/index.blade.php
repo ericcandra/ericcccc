@@ -18,7 +18,7 @@
                     Add class <code>list data Anggota</code>
                   </p>
                   @can('create',App\anggota::class)
-                  <a href="{{route('Anggota.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
+                  <a href="{{route('anggota.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
                   @endcan
                   <div class="table-responsive">
                     <table class="table">
