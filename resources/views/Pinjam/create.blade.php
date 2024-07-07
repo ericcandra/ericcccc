@@ -30,7 +30,7 @@
               </div>
                           
               <div class="form-group">
-                <label for="text">buku_id</label>
+                <label for="text">kode buku</label>
                 <select name="buku_id" class="form-control">
                     @foreach ($buku as $item)
                         <option value="{{$item['id']}}">
@@ -44,7 +44,7 @@
                     </span>
                 @enderror
                 <div class="form-group">
-                  <label for="text">buku_id</label>
+                  <label for="text">nama buku</label>
                   <select name="buku_id" class="form-control">
                       @foreach ($buku as $item)
                           <option value="{{$item['id']}}">
@@ -58,7 +58,7 @@
                       </span>
                   @enderror
                 <div class="form-group">
-                    <label for="text">anggota_id</label>
+                    <label for="text">nama anggota</label>
                     <select name="anggota_id" class="form-control">
                         @foreach ($anggota as $item)
                             <option value="{{$item['id']}}">
