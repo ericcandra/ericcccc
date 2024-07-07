@@ -42,8 +42,8 @@
                               @can('delete',$item)
                               <form action="{{route('anggota.destroy',$item['id'])}}" method="post" style="display: inline">
                                 @method('DELETE')
-                                @csrf
-                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{$item["nama_anggota"]}}">Hapus</button>
+                              @csrf
+                              <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{$item["nama_anggota"]}}">Hapus</button>
                             
                               </form>
                               @endcan
