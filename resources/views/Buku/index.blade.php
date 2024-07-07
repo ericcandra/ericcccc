@@ -53,7 +53,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              <a href="{{route('Buku.edit',$item["kode_buku"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{route('buku.edit',$item["kode_buku"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
 
