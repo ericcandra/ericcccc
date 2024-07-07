@@ -82,7 +82,7 @@ class AnggotaController extends Controller
      */
     public function edit(Anggota $anggota)
     {
-        $anggota = Anggota::all(); 
+        // $anggota = Anggota::all(); 
         return view('Anggota.edit')
         ->with('anggota',$anggota);
     }
