@@ -36,7 +36,7 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->user()->cannot('create', buku::class)){
+        if ($request->user()->cannot('create', Buku::class)){
             abort(403);
         }
         // dd($request);
@@ -77,9 +77,9 @@ class BukuController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, buku $buku)
+    public function update(Request $request, buku $Buku)
     {
-        if (auth()->user()->cannot('update', $buku)){
+        if (auth()->user()->cannot('update', $Buku)){
             abort(403);
         }
         // dd($request);
